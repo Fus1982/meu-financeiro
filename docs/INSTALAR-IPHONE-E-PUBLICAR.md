@@ -1,10 +1,20 @@
-# Instalar no iPhone (grátis) — PWA + Cloudflare Pages
+# Instalar no iPhone (grátis) — PWA
 
-Este guia usa **PWA** (sem App Store, sem taxa da Apple) e hospedagem **gratuita** na Cloudflare Pages.
+**App no ar agora:** https://fus1982.github.io/meu-financeiro/
+
+1. No iPhone, abra o **Safari**.
+2. Acesse o link acima.
+3. Toque em **Compartilhar** → **Adicionar à Tela de Início**.
+
+Hospedagem atual: **GitHub Pages** (plano gratuito, sem Cloudflare). Cloudflare Pages fica como opção futura se você criar tokens depois.
 
 ## Parte 1 — Publicar na internet (uma vez)
 
-### Opção A — Automático (GitHub Actions + Cloudflare) **recomendado**
+### Opção A — GitHub Pages (já ativo, sem custo extra)
+
+O repositório inclui `.github/workflows/deploy-github-pages.yml`. Cada push em `main` atualiza https://fus1982.github.io/meu-financeiro/
+
+### Opção B — Automático (GitHub Actions + Cloudflare) *opcional*
 
 O repositório inclui `.github/workflows/deploy-cloudflare-pages.yml`.
 

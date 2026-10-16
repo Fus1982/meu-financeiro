@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.3] — 2026-10-16
+
+### Adicionado
+
+- Publicação gratuita em GitHub Pages: https://fus1982.github.io/meu-financeiro/
+
 ## [0.1.2] — 2026-10-16
 
 ### Adicionado

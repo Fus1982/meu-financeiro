@@ -19,7 +19,9 @@ npm run dev
 
 Abra `http://127.0.0.1:43123`.
 
-**Repositório publicado:** https://github.com/Fus1982/meu-financeiro
+**App no ar (grátis):** https://fus1982.github.io/meu-financeiro/
+
+**Repositório:** https://github.com/Fus1982/meu-financeiro
 
 ### Supabase
 

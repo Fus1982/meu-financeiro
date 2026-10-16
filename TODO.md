@@ -15,7 +15,8 @@
 - [ ] Edição/exclusão de lançamentos com histórico de alterações.
 - [ ] Relatórios exportáveis (CSV/PDF).
 - [ ] Ícones PWA em alta resolução.
-- [ ] Deploy Cloudflare Pages (guia em `docs/INSTALAR-IPHONE-E-PUBLICAR.md` — conta Cloudflare + GitHub do usuário).
+- [x] App publicado no GitHub Pages (https://fus1982.github.io/meu-financeiro/).
+- [ ] Cloudflare Pages (opcional; exige tokens da conta Cloudflare).
 - [ ] Cron/worker gratuito para resumo semanal (ex.: Cloudflare Cron Trigger) se necessário.
 
 ## Prioridade baixa
