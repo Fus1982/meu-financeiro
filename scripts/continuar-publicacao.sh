@@ -3,8 +3,16 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 if ! gh auth status >/dev/null 2>&1; then
-  echo "GitHub não autenticado. Rode: gh auth login"
-  echo "Ou defina GH_TOKEN com um Personal Access Token (escopo repo)."
+  if [[ -n "${GH_TOKEN:-}" ]]; then
+    echo "Autenticando com GH_TOKEN..."
+    echo "$GH_TOKEN" | gh auth login --with-token
+  fi
+fi
+
+if ! gh auth status >/dev/null 2>&1; then
+  echo "GitHub não autenticado."
+  echo "  • iPhone/Safari: https://github.com/login/device (código exibido por gh auth login)"
+  echo "  • Ou defina GH_TOKEN (PAT classic, escopo repo) no ambiente."
   exit 1
 fi
 
