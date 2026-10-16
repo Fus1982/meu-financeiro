@@ -19,6 +19,8 @@ npm run dev
 
 Abra `http://127.0.0.1:43123`.
 
+**Repositório publicado:** https://github.com/Fus1982/meu-financeiro
+
 ### Supabase
 
 1. Crie um projeto em [supabase.com](https://supabase.com).
