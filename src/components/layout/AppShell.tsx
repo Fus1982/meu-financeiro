@@ -39,8 +39,8 @@ export function AppShell() {
           <div>
             <p className="font-semibold text-white">Meu Financeiro</p>
             <p className="text-xs text-slate-400">
-              {isLocalMode ? 'Modo local + sync' : 'Sincronizado'}
-              {pendingSync > 0 ? ` · ${pendingSync} pendente(s)` : ''}
+              {isLocalMode ? 'Modo local (dados neste dispositivo)' : 'Sincronizado na nuvem'}
+              {!isLocalMode && pendingSync > 0 ? ` · ${pendingSync} pendente(s)` : ''}
             </p>
           </div>
         </div>

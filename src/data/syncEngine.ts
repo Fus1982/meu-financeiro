@@ -3,11 +3,19 @@ import { isSupabaseConfigured, supabase } from './supabaseClient'
 import type { SyncQueueItem } from '../domain/sync'
 
 export async function enqueueSync(item: Omit<SyncQueueItem, 'retryCount'>) {
+  if (!isSupabaseConfigured) return
   await localDb.syncQueue.put({ ...item, retryCount: 0 })
 }
 
 export async function getPendingSyncCount(): Promise<number> {
+  if (!isSupabaseConfigured) return 0
   return localDb.syncQueue.count()
+}
+
+/** Remove fila obsoleta de sessões anteriores sem Supabase configurado. */
+export async function reconcileSyncQueueForMode(): Promise<void> {
+  if (isSupabaseConfigured) return
+  await localDb.syncQueue.clear()
 }
 
 export async function flushSyncQueue(userId: string): Promise<{ ok: boolean; error?: string }> {
@@ -40,6 +48,10 @@ export async function flushSyncQueue(userId: string): Promise<{ ok: boolean; err
 }
 
 export function setupOnlineSync(userId: string, onStatus: (pending: number) => void) {
+  if (!isSupabaseConfigured) {
+    void reconcileSyncQueueForMode().then(() => onStatus(0))
+    return () => {}
+  }
   const run = async () => {
     if (!navigator.onLine) return
     await flushSyncQueue(userId)
