@@ -8,7 +8,7 @@ Aplicativo web progressivo (PWA) para administração de finanças pessoais: rec
 - Tailwind CSS 4
 - Supabase (auth, PostgreSQL, sync) — opcional
 - IndexedDB (Dexie) para dados locais e fila offline
-- Cloudflare Pages (hospedagem futura, quando autorizada)
+- Cloudflare Pages (hospedagem gratuita — ver guia abaixo)
 
 ## Executar localmente
 
@@ -47,7 +47,23 @@ Sem Supabase, o app funciona em **modo local** (dados no navegador) e enfileira 
 
 Instale pelo menu do navegador (Android/iOS/desktop). Service worker cacheia o app; lançamentos offline ficam na fila local.
 
+### iPhone (sem App Store, sem custo)
+
+1. Publique o app na **Cloudflare Pages** (passo a passo completo).
+2. No **Safari**, abra o link `https://….pages.dev` → **Compartilhar** → **Adicionar à Tela de Início**.
+
+Guia detalhado: [`docs/INSTALAR-IPHONE-E-PUBLICAR.md`](docs/INSTALAR-IPHONE-E-PUBLICAR.md)
+
+## Publicar (Cloudflare Pages)
+
+| Configuração | Valor |
+|--------------|--------|
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Variáveis (opcional) | `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` |
+
 ## Documentação adicional
 
+- `docs/INSTALAR-IPHONE-E-PUBLICAR.md` — publicar + instalar no iPhone
 - `CHANGELOG.md` — histórico de alterações
 - `TODO.md` — próximos passos

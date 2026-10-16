@@ -15,7 +15,7 @@
 - [ ] Edição/exclusão de lançamentos com histórico de alterações.
 - [ ] Relatórios exportáveis (CSV/PDF).
 - [ ] Ícones PWA em alta resolução.
-- [ ] Deploy Cloudflare Pages (após autorização).
+- [ ] Deploy Cloudflare Pages (guia em `docs/INSTALAR-IPHONE-E-PUBLICAR.md` — conta Cloudflare + GitHub do usuário).
 - [ ] Cron/worker gratuito para resumo semanal (ex.: Cloudflare Cron Trigger) se necessário.
 
 ## Prioridade baixa

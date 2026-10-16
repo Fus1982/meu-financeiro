@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2] — 2026-10-16
+
+### Adicionado
+
+- `public/_redirects` para SPA na Cloudflare Pages.
+- Guia `docs/INSTALAR-IPHONE-E-PUBLICAR.md` (publicação grátis + instalação no iPhone).
+
 ## [0.1.1] — 2026-10-16
 
 ### Corrigido
