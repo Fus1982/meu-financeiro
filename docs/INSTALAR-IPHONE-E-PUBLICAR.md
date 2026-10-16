@@ -4,6 +4,19 @@ Este guia usa **PWA** (sem App Store, sem taxa da Apple) e hospedagem **gratuita
 
 ## Parte 1 — Publicar na internet (uma vez)
 
+### Opção A — Automático (GitHub Actions + Cloudflare) **recomendado**
+
+O repositório inclui `.github/workflows/deploy-cloudflare-pages.yml`.
+
+1. Envie o código para o GitHub (veja `scripts/publicar.sh` após `gh auth login`).
+2. No GitHub: **Settings → Secrets and variables → Actions** → crie:
+   - `CLOUDFLARE_API_TOKEN` (Cloudflare → My Profile → API Tokens → template *Edit Cloudflare Workers*)
+   - `CLOUDFLARE_ACCOUNT_ID` (Cloudflare → Overview, coluna direita)
+   - (Opcional) `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY`
+3. Cada push em `main` publica em `https://meu-financeiro.pages.dev` (ou URL que a Cloudflare mostrar).
+
+### Opção B — Manual no painel Cloudflare
+
 ### 1. Repositório no GitHub
 
 Se o projeto ainda não estiver no GitHub:
